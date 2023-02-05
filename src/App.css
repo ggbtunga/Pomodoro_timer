@@ -1,11 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 *{
     padding: 0;
     margin: 0;
-    background-color: blanchedalmond;
+    font-family: 'Lato', sans-serif;
+}
+body{
+    background-color: #e5e5e5;
 }
 
 .titleName{
     margin: 20px;
+    font-family: 'Lobster', cursive;
 }
 
 .painel{
@@ -13,4 +20,54 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.focus{
+    margin: 20px;
+    padding: 20px;
+    background-color: #F03648;
+    color: white;
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+}
+.break{
+    margin: 20px;
+    padding: 20px;
+    background-color: #45B6F3;
+    color: white;
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.timer{
+    font-size: 90px;
+}
+
+.focusButton{
+    margin-top: 7px;
+    padding: 10px 40px;
+    font-size: 30px;
+    color: #F03648;
+    background-color: white;
+    border-style: none;
+    border-radius: 3px;
+    box-shadow: 0 5px rgba(102,102,102,0.671);
+}
+.breakButton{
+    margin-top: 7px;
+    padding: 10px 40px;
+    font-size: 30px;
+    color: #45B6F3;
+    background-color: white;
+    border-style: none;
+    border-radius: 3px;
+    box-shadow: 0 5px rgba(102,102,102,0.671);
+}
+button:hover{
+    cursor: pointer;
+}
+button:active{
+    transform: translateY(3px);
 }

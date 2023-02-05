@@ -36,7 +36,8 @@ export default function Painel({duration}){
     
 
     return(
-        <div className="painel">
+      <div className="painel">
+        <div className={isFocus? "focus":"break"}>
             <h1>
               {isFocus? "Focus":"Break"}
             </h1>
@@ -44,9 +45,10 @@ export default function Painel({duration}){
               {minutes < 10? "0" + minutes :  minutes}
               :
               {seconds < 10? "0" + seconds : seconds}</div>
-            <button onClick={()=> setIsRunning(!isRunning)}>
+            <button className={isFocus? "focusButton":"breakButton"} onClick={()=> setIsRunning(!isRunning)}>
               {isRunning? "Stop" : "Start" }
             </button>
+        </div>
         </div>
     )
 }
