@@ -1,1 +1,1 @@
-https://pomodoro-timer-kmaktzq2j-ggbtunga.vercel.app
+https://pomodoro-timer-ggbtunga.vercel.app
