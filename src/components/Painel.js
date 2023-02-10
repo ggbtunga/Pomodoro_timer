@@ -1,9 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-export default function Painel({duration}){
+export default function Painel({focusTime,breakTime}){
 
-    const [time,setTime] = useState(duration);
+    const [time,setTime] = useState(focusTime);
     const [isRunning,setIsRunning] = useState(false);
     const [intervalId,setIntervalId] = useState(null);
     const [isFocus,setIsFocus] = useState(true) 
@@ -17,10 +17,10 @@ export default function Painel({duration}){
               if(time===0){
                 if(isFocus){
                   setIsFocus(false)
-                  setTime(5 * 60)
+                  setTime(breakTime)
                 }else{
                   setIsFocus(true)
-                  setTime(25 * 60)
+                  setTime(focusTime)
                 }
                 setIsRunning(false)
               }else{
@@ -32,7 +32,7 @@ export default function Painel({duration}){
             clearInterval(intervalId);
           }
           return () => clearInterval(intervalId);
-    },[isRunning,time,isFocus])
+    },[isRunning,time,isFocus,focusTime,breakTime])
     
 
     return(
