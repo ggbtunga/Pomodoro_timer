@@ -71,3 +71,53 @@ button:hover{
 button:active{
     transform: translateY(3px);
 }
+
+.slider{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.slider input{
+  appearance: none;
+  width: 10%;
+  height: 10px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+.slider input:hover{
+    opacity: 1;
+}
+.slider input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #2d6380;
+    cursor: pointer;
+}
+.slider input::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #2d6380;
+    cursor: pointer;
+}
+
+.sliderButton{
+    margin-top: 7px;
+    padding: 5px 10px;
+    font-size: 15px;
+    color: #2d6380;
+    background-color: white;
+    border-style: none;
+    border-radius: 1px;
+    box-shadow: 0 2px rgba(102,102,102,0.671);
+}
+

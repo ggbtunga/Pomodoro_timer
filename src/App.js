@@ -17,8 +17,8 @@ function App() {
     <div>
       <h1 className="titleName">Pomodoro</h1>
       <Painel focusTime={focusTime}/>
-      <h2>Custom timer</h2>
-      <div>
+      <div className="slider">
+        <h2>Custom timer</h2>
         <input
           id="focusTime"
           type="range"
@@ -39,7 +39,7 @@ function App() {
           onChange={(event) => setBreakTime(event.target.value)}
         />
         <p>Break:{breakTime/60}</p>
-        <button onClick={handleSubmit}>Enviar</button>
+        <button className="sliderButton" onClick={handleSubmit}>Enviar</button>
       </div>
     </div>
   )
