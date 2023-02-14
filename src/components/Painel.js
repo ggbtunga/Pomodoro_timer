@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useState, useEffect } from "react";
 
 export default function Painel({focusTime,breakTime}){
+
+    const audioRef = useRef(null);
 
     const [time,setTime] = useState(focusTime);
     const [isRunning,setIsRunning] = useState(false);
@@ -10,6 +12,14 @@ export default function Painel({focusTime,breakTime}){
 
     let minutes = Math.floor(time / 60);
     let seconds = time % 60;
+
+    useEffect(()=>{
+      if(isRunning){
+        audioRef.current.play();
+      }else{
+        audioRef.current.pause();
+      }
+    },[isRunning])
 
     useEffect(() =>{
         if (isRunning) {
@@ -38,6 +48,10 @@ export default function Painel({focusTime,breakTime}){
     return(
       <div className="painel">
         <div className={isFocus? "focus":"break"}>
+            <audio
+              ref={audioRef}
+              src="./assets/sounds/clock_tick.mp3"
+              loop></audio>
             <h1>
               {isFocus? "Focus":"Break"}
             </h1>
