@@ -39,7 +39,7 @@ function App() {
           onChange={(event) => setBreakTime(event.target.value)}
         />
         <p>Break:{breakTime/60}</p>
-        <button className="sliderButton" onClick={handleSubmit}>Enviar</button>
+        <button className="sliderButton" onClick={handleSubmit}>Change</button>
       </div>
     </div>
   )
