@@ -16,7 +16,7 @@ function App() {
   return(
     <div>
       <h1 className="titleName">Pomodoro</h1>
-      <Painel focusTime={focusTime}/>
+      <Painel focusTime={focusTime} breakTime={breakTime}/>
       <div className="slider">
         <h2>Custom timer</h2>
         <input
